@@ -28,8 +28,9 @@ VALUES
     (5, 'Nimona', 'Noelle Stevenson', 'Intrínseca', 'Graphic Novel', 272, 'Português', 2016, 49.99),
     (6, 'Capitães da Areia', 'Jorge Amado', 'Companhia de Bolso', 'Romance', 280, 'Português', 2009, 35.50),
     (7, 'Os Sete Maridos de Evelyn Hugo', 'Taylor Jenkins Reid', 'Paralela', 'Romance', 360, 'Português', 2019, 29.99),
-    (8, 'Mañana tendremos otros nombres', 'Patricio Pron', 'Alfaguara', 'Romance', 275, 'Espanhol', 2019, 85.90),
-    (9, '')
+    (8, 'Mañana Tendremos Otros Nombres', 'Patricio Pron', 'Alfaguara', 'Romance', 275, 'Espanhol', 2019, 85.90),
+    (9, 'A Polícia da Memória', 'Yoko Ogawa', 'Estação Liberdade', 'Romance', '320', 'Português', 2021, 65.00)
+    (10, 'The Reader:20th Anniversary Edition', 'Bernhard Schlink', 'Weidenfeld & Nicolson', 'Ficção histórica', '240', 'Inglês', 2017, 65.00)
 `;
 
 function createTableBooks() {
