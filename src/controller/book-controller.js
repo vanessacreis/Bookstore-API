@@ -34,11 +34,54 @@ const bookController = (app, bd) => {
     }
   });
 
-  app.post("/books", (req, res) => {});
+  app.post("/books", async (req, res) => {
+    const body = req.body;
+    try {
+      const resp = await bookModel.insertBook(body);
+      res.status(201).json({
+        message: resp,
+        error: false,
+      });
+    } catch (error) {
+      res.status(400).json({
+        message: error.message,
+        error: true,
+      });
+    }
+  });
 
-  app.put("/books/book/:id", (req, res) => {});
+  app.put("/books/book/:id", async (req, res) => {
+    const id = req.params.id;
+    const body = req.body;
+    try {
+      const resp = await bookModel.updateBook(id, body);
+      res.status(201).json({
+        message: resp,
+        error: false,
+      });
+    } catch (error) {
+      res.status(400).json({
+        message: error.message,
+        error: true,
+      });
+    }
+  });
 
-  app.delete("/books/book/:id", (req, res) => {});
+  app.delete("/books/book/:id", async (req, res) => {
+    const id = req.params.id;
+    try {
+      const resp = await bookModel.deleteBook(id);
+      res.status(202).json({
+        message: resp,
+        error: false,
+      });
+    } catch (error) {
+      res.status(400).json({
+        message: error.message,
+        error: true,
+      });
+    }
+  });
 };
 
 export default bookController;

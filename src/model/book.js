@@ -22,11 +22,49 @@ class Book {
     }
   };
 
-  insertBook = (name) => {};
+  insertBook = async (book) => {
+    try {
+      const newBook = new BookSchema(
+        book.name,
+        book.writer,
+        book.publisher,
+        book.genre,
+        book.pages,
+        book.language,
+        book.year,
+        book.price
+      );
+      return await this.dao.insertBook(newBook);
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  };
 
-  deleteBook = (name) => {};
+  updateBook = async (id, book) => {
+    try {
+      const updatedBook = new BookSchema(
+        book.name,
+        book.writer,
+        book.publisher,
+        book.genre,
+        book.pages,
+        book.language,
+        book.year,
+        book.price
+      );
+      return await this.dao.updateBook(id, updatedBook);
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  };
 
-  updateBook = () => {};
+  deleteBook = async (id) => {
+    try {
+      return await this.dao.deleteBook(id);
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  };
 }
 
 export default Book;
