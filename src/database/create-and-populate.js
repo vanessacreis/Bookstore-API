@@ -3,7 +3,7 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 sqlite3.verbose();
 const filePath = dirname(fileURLToPath(import.meta.url)) + "/database.db";
-const database = new sqlite3.Database("./database.db");
+const database = new sqlite3.Database(filePath);
 
 const BOOKS_SCHEMA = `
 CREATE TABLE IF NOT EXISTS "BOOKS"(
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS "BOOKS"(
 );`;
 
 const ADD_BOOKS_DATA = `
-INSERT INTO BOOKS(ID_Books, Name, Writer, Publisher, Genre, Pages, Language, Year, Price)
+INSERT INTO BOOKS (ID_Books, NAME, WRITER, PUBLISHER, GENRE, PAGES, LANGUAGE, YEAR, PRICE)
 VALUES
     (1, 'O Sol é para Todos', 'Harper Lee', 'José Olypio', 'Ficção Clássica', 349, 'Português', 2015, 31.40),
     (2, 'A Menina que Roubava Livros', 'Markus Zusak', 'Intrínseca', 'Romance', 480, 'Português', 2007, 43.99),
@@ -29,8 +29,8 @@ VALUES
     (6, 'Capitães da Areia', 'Jorge Amado', 'Companhia de Bolso', 'Romance', 280, 'Português', 2009, 35.50),
     (7, 'Os Sete Maridos de Evelyn Hugo', 'Taylor Jenkins Reid', 'Paralela', 'Romance', 360, 'Português', 2019, 29.99),
     (8, 'Mañana Tendremos Otros Nombres', 'Patricio Pron', 'Alfaguara', 'Romance', 275, 'Espanhol', 2019, 85.90),
-    (9, 'A Polícia da Memória', 'Yoko Ogawa', 'Estação Liberdade', 'Romance', '320', 'Português', 2021, 65.00)
-    (10, 'The Reader:20th Anniversary Edition', 'Bernhard Schlink', 'Weidenfeld & Nicolson', 'Ficção histórica', '240', 'Inglês', 2017, 65.00)
+    (9, 'A Polícia da Memória', 'Yoko Ogawa', 'Estação Liberdade', 'Romance', '320', 'Português', 2021, 65.00),
+    (10, 'The Reader: 20th Anniversary Edition', 'Bernhard Schlink', 'Weidenfeld & Nicolson', 'Ficção histórica', '240', 'Inglês', 2017, 65.00)
 `;
 
 function createTableBooks() {

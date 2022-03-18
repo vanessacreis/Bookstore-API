@@ -3,7 +3,7 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 sqlite3.verbose();
 const filePath = dirname(fileURLToPath(import.meta.url)) + "/database.db";
-const database = new sqlite3.Database("./database.db");
+const database = new sqlite3.Database(filePath);
 
 process.on("SIGINT", () =>
   database.close(() => {
