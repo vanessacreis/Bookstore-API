@@ -7,33 +7,21 @@ class BookDAO {
     return new Promise((resolve, reject) => {
       this.db.all("SELECT * FROM BOOKS", (error, rows) => {
         if (error) {
-          reject({
-            message: error.message,
-            error: true,
-          });
+          reject(error);
         } else {
-          resolve({
-            books: rows,
-            error: false,
-          });
+          resolve(rows);
         }
       });
     });
   };
 
-  showOneBook = (name) => {
+  showOneBook = (id) => {
     return new Promise((resolve, reject) => {
-      this.db.all("SELECT * FROM BOOKS WHERE NAME = ?", name, (error, rows) => {
+      this.db.all("SELECT * FROM BOOKS WHERE ID_Books = ?", id, (error, rows) => {
         if (error) {
-          reject({
-            message: error.message,
-            erro: true,
-          });
+          reject(error);
         } else {
-          resolve({
-            book: rows,
-            erro: false,
-          });
+          resolve(rows);
         }
       });
     });
