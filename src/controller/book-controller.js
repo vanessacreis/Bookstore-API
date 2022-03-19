@@ -23,7 +23,23 @@ const bookController = (app, bd) => {
     try {
       const resp = await bookModel.showOneBook(id);
       res.status(200).json({
-        books: resp,
+        book: resp,
+        error: false,
+      });
+    } catch (error) {
+      res.status(400).json({
+        message: error.message,
+        error: true,
+      });
+    }
+  });
+
+  app.get("/books/price/:id", async (req, res) => {
+    const id = req.params.id;
+    try {
+      const resp = await bookModel.bookPrice(id);
+      res.status(200).json({
+        info: resp,
         error: false,
       });
     } catch (error) {

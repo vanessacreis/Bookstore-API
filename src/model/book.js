@@ -22,6 +22,14 @@ class Book {
     }
   };
 
+  bookPrice = async (id) => {
+    try {
+      return await this.dao.bookPrice(id);
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  };
+
   insertBook = async (book) => {
     try {
       const newBook = new BookSchema(

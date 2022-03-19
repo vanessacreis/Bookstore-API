@@ -31,6 +31,22 @@ class BookDAO {
     });
   };
 
+  bookPrice = (id) => {
+    return new Promise((resolve, reject) => {
+      this.db.all(
+        "SELECT NAME, WRITER, PRICE FROM BOOKS WHERE ID_Books = ?",
+        id,
+        (error, rows) => {
+          if (error) {
+            reject(error);
+          } else {
+            resolve(rows);
+          }
+        }
+      );
+    });
+  };
+
   insertBook = (newBook) => {
     return new Promise((resolve, reject) => {
       this.db.run(
