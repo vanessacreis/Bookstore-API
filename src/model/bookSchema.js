@@ -4,8 +4,8 @@ class BookSchema {
     this.writer = this.checkWriter(writer);
     this.publisher = this.checkPublisher(publisher);
     this.genre = genre;
-    this.pages = pages;
     this.language = language;
+    this.pages = pages;
     this.year = this.checkYear(year);
     this.price = price;
   }
