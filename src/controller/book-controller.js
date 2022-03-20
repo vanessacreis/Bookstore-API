@@ -50,6 +50,23 @@ const bookController = (app, bd) => {
     }
   });
 
+  app.get("/books/writer/:writer", async (req, res) => {
+    const param = req.params.writer;
+    const writer = param.replace("+", " ");
+    try {
+      const resp = await bookModel.selectWriter(writer);
+      res.status(200).json({
+        books: resp,
+        error: false,
+      });
+    } catch (error) {
+      res.status(400).json({
+        message: error.message,
+        error: true,
+      });
+    }
+  });
+
   app.post("/books", async (req, res) => {
     const body = req.body;
     try {

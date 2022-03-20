@@ -30,6 +30,14 @@ class Book {
     }
   };
 
+  selectWriter = async (writer) => {
+    try {
+      return await this.dao.selectWriter(writer);
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  };
+
   insertBook = async (book) => {
     try {
       const newBook = new BookSchema(
