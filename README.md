@@ -38,7 +38,7 @@ npm run populate
 ```
 npm run start
 ```
-<p>Ao iniciar o projeto, o servidor será aberto em http://localhost:3000/, sendo 3000 a porta padrão.</p>
+<p>Ao iniciar o projeto, o servidor será aberto em http://localhost:3000/, sendo 3000 a porta padrão. Caso necessário, a porta poderá ser alterada no arquivo server.js</p>
 
 ---
 ## Rotas HTTP 🗺️
