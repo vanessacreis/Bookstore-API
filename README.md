@@ -217,4 +217,10 @@ Este projeto conta com um arquivo de testes para conferir o funcionamento das ro
 ```
 npm run test
 ```
+---
 
+## Desenvolvido por 📔
+
+Vanessa Reis  
+
+[![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vanessacreisbh/)](https://www.linkedin.com/in/vanessacreisbh/)
