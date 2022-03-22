@@ -8,6 +8,7 @@ const bookController = (app, bd) => {
       const resp = await bookModel.allBooks();
       res.status(200).json({
         books: resp,
+        count: resp.length,
         error: false,
       });
     } catch (error) {
@@ -57,6 +58,7 @@ const bookController = (app, bd) => {
       const resp = await bookModel.selectWriter(writer);
       res.status(200).json({
         books: resp,
+        count: resp.length,
         error: false,
       });
     } catch (error) {
