@@ -20,7 +20,7 @@
  
  - Clone o repositório:
 ```
-git clone git@github.com:vanessacreis/Bookstore-API.git
+git clone https://github.com/vanessacreis/Bookstore-API.git
 ```
 - Acesse a pasta:
 ```
