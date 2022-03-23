@@ -1,20 +1,23 @@
-# Bookstore API 📚
+# 📚 Bookstore API
+
  <p align="justify">Projeto de encerramento do módulo 4 da Resilia Educação. O objetivo é desenvolver uma API Rest com as informações do estoque de uma livraria. </p>
 
 <img src="https://nypem.net/wp-content/uploads/2019/07/books-header-1.jpg" />
 
- ---
+---
 
- ## Pré-requisitos 📘
- - <a href="https://nodejs.org/en/">Node.Js</a> - v. 16.13.2
- - <a href="https://expressjs.com/pt-br/">Express</a> - v. 4.17.3
- - <a href="https://www.npmjs.com/package/sqlite3">SQLite</a> - v. 5.0.0
- - <a href="https://nodemon.io/">Nodemon</a> - v. 2.0.15
- - <a href="https://www.npmjs.com/package/supertest"> Supertest</a> - v. 6.2.2
- 
- ---
+## 📘 Pré-requisitos
 
- ## Iniciando da aplicação 📖
+- <a href="https://nodejs.org/en/">Node.Js</a> - v. 16.13.2
+- <a href="https://www.npmjs.com/">NPM</a> - v. 8.1.2
+- <a href="https://expressjs.com/pt-br/">Express</a> - v. 4.17.3
+- <a href="https://www.npmjs.com/package/sqlite3">SQLite</a> - v. 5.0.0
+- <a href="https://nodemon.io/">Nodemon</a> - v. 2.0.15
+- <a href="https://www.npmjs.com/package/supertest"> Supertest</a> - v. 6.2.2
+
+---
+
+## 📖 Iniciando da aplicação
 
  <p>Rode os comandos a seguir no terminal ou PoweShell.</p>
  
@@ -41,9 +44,11 @@ npm run start
 <p>Ao iniciar o projeto, o servidor será aberto em http://localhost:3000/, sendo 3000 a porta padrão. Caso necessário, a porta poderá ser alterada no arquivo server.js</p>
 
 ---
-## Rotas HTTP 🗺️
+
+## 📗 Rotas HTTP
 
 ### <b> GET /books </b>
+
 Lista todos os livros da base de dados.
 Exemplo da resposta esperada:
 
@@ -79,7 +84,8 @@ Exemplo da resposta esperada:
 
 ```
 
-### <b> GET /books/book/{id} </b> 
+### <b> GET /books/book/{id} </b>
+
 Retorna livro de acordo com o id. Campo {id} deverá ser substituído pelo id do livro escolhido.
 Exemplo da resposta esperada:
 
@@ -102,7 +108,8 @@ Exemplo da resposta esperada:
 }
 ```
 
-### <b> GET /books/price/{id} </b> 
+### <b> GET /books/price/{id} </b>
+
 Retorna preço do livro de acordo com o id. Campo {id} deverá ser substituído pelo id do livro escolhido.
 Exemplo da resposta esperada:
 
@@ -118,8 +125,10 @@ Exemplo da resposta esperada:
 	"error": false
 }
 ```
-### <b> GET /books/writer/{Nome+Sobrenome} </b> 
-Retorna todos os livros do autor escolhido. O nome e sobrenome do autor deverá ser inserido na url com um + ao invés do espaço. 
+
+### <b> GET /books/writer/{Nome+Sobrenome} </b>
+
+Retorna todos os livros do autor escolhido. O nome e sobrenome do autor deverá ser inserido na url com um + ao invés do espaço.
 Exemplo da resposta esperada:
 
 ```
@@ -153,8 +162,10 @@ Exemplo da resposta esperada:
 }
 
 ```
-### <b> POST /books </b> 
-Insere um novo livro na base de dados. Campos <i>name, writer, publisher e year</i> são obrigatórios e não podem ser enviados vazios. 
+
+### <b> POST /books </b>
+
+Insere um novo livro na base de dados. Campos <i>name, writer, publisher e year</i> são obrigatórios e não podem ser enviados vazios.
 Modelo do schema a ser utilizado no body.
 
 ```
@@ -169,7 +180,9 @@ Modelo do schema a ser utilizado no body.
 	"price": "24,90"
 }
 ```
+
 Exemplo da resposta esperada:
+
 ```
 {
 	"message": "Book Claros Sinais de Loucura was registered successfully",
@@ -178,8 +191,10 @@ Exemplo da resposta esperada:
 ```
 
 ### <b> PUT /books/book/{id} </b>
+
 Atualiza um livro na base de dados. Campo {id} deverá ser substituído pelo id do livro a ser atualizado.
 Modelo do schema a ser utilizado no body:
+
 ```
 {
 	"name": "Mar Sem Estrelas",
@@ -192,7 +207,9 @@ Modelo do schema a ser utilizado no body:
 	"price": "60.99"
 }
 ```
+
 Exemplo da resposta esperada:
+
 ```
 {
 	"message": "Book Mar Sem Estrelas was updated.",
@@ -201,26 +218,33 @@ Exemplo da resposta esperada:
 ```
 
 ### <b> DELETE /books/book/{id} </b>
-Deleta o livro escolhido da base de dados. 
+
+Deleta o livro escolhido da base de dados.
 Exemplo da resposta esperada:
+
 ```
 {
 	"message": "Book id: 8 was deleted.",
 	"error": false
 }
 ```
+
 ---
 
-## Testes 📕
-Este projeto conta com um arquivo de testes para conferir o funcionamento das rotas da API. Para utilizá-lo, é necessário que o banco de dados esteja populado. Os testes podem ser rodados com o comando
+## 📕 Testes
+
+<p align="justify">Este projeto conta com um arquivo de testes para conferir o funcionamento das rotas da API. Para utilizá-lo, é necessário que o banco de dados esteja populado. Os testes podem ser rodados com o comando</p>
 
 ```
 npm run test
 ```
+
 ---
 
-## Desenvolvido por 📔
+## 📔 Desenvolvido por
 
-Vanessa Reis  
+<b>Vanessa Reis 📚</b>
+
+<p>Estudante de Desenvolvimento Web Full Stack, historiadora e leitora.</p>
 
 [![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vanessacreisbh/)](https://www.linkedin.com/in/vanessacreisbh/)
