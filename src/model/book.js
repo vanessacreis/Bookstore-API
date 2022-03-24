@@ -16,7 +16,14 @@ class Book {
 
   showOneBook = async (id) => {
     try {
-      return await this.dao.showOneBook(id);
+      const resp = await this.dao.showOneBook(id);
+      if (resp.length === 0) {
+        throw new Error(
+          `ID ${id} is not found. Please try again with a valid ID.`
+        );
+      } else {
+        return resp;
+      }
     } catch (error) {
       throw new Error(error.message);
     }
@@ -35,7 +42,9 @@ class Book {
     try {
       const resp = await this.dao.selectWriter(writer);
       if (resp.length === 0) {
-        return `Sorry, we don't have any books by ${writer}. Register a new book and try again.`;
+        throw new Error(
+          `Sorry, we don't have any books by ${writer}. Register a new book and try again.`
+        );
       } else {
         return resp;
       }
