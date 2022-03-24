@@ -1,6 +1,8 @@
 # 📚 Bookstore API
 
- <p align="justify">Projeto de encerramento do módulo 4 da Resilia Educação. O objetivo é desenvolver uma API Rest com as informações do estoque de uma livraria. </p>
+ <p align="justify">Projeto de encerramento do módulo 4 da Resilia Educação. O objetivo é desenvolver uma API Rest com as informações do estoque de uma livraria.
+ <br/>Deploy disponível no Heroku, você pode acessá-lo <b><a href="https://livraria-api.herokuapp.com/">aqui</a></b>.</p>
+
 
 <img src="https://nypem.net/wp-content/uploads/2019/07/books-header-1.jpg" />
 
