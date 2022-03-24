@@ -24,6 +24,7 @@ class Book {
 
   bookPrice = async (id) => {
     try {
+      await this.checkID(id);
       return await this.dao.bookPrice(id);
     } catch (error) {
       throw new Error(error.message);
